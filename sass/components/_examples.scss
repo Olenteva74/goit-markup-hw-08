@@ -1,0 +1,34 @@
+.examples {
+
+    @media screen and (max-width: 1199px) {
+        display: none;
+    }
+}
+
+.examples__title {
+    @extend %title;  
+}
+
+.examples__list {
+    @extend %list;
+    @include layoutFlex();
+}
+
+.examples__thumb {
+    position: relative;
+    width: 100%;
+}
+.examples__text {
+    @include centerFlex();
+    @include fontStyle($line-height: 1.14);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%; 
+    height: 70px; 
+    background-color: $examples-thumb-color;
+    color: $primeri-white-color;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+}

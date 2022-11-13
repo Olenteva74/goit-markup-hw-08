@@ -1,0 +1,63 @@
+.net {
+    @extend %list;
+    @include centerFlex();
+    gap: 10px;
+    padding-bottom: 24px;
+
+    @media screen and (min-width: 1200px) {
+        padding-bottom: 30px;
+    }
+}
+
+.net__item {
+    width: 44px;
+    height: 44px;
+}
+
+.net__link {
+    @include centerFlex();
+
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    color: $net-icon-color;
+    transition: background-color 250ms $timing-function, color 250ms $timing-function;
+
+    &:hover,
+    &:focus {
+        background-color: $accent-color;
+        color: $primeri-white-color; 
+    }  
+
+}
+
+.net__icon {
+    fill: currentColor;
+}
+
+
+// Footer-net 
+ .net__wrapper--footer {
+    @include layoutFlex(20px);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.net__list--footer {
+    padding-bottom: 0;
+}
+.net__link--footer {
+    color: $primeri-white-color;
+    background-color: $adress-net-color;
+    transform: scale(1);
+    transition: transform 250ms $timing-function, backgroud-color 250ms $timing-function;
+
+    &:hover,
+    &r:focus {
+        background-color: $accent-color;
+        transform: scale(1.1);
+    }
+
+}
+

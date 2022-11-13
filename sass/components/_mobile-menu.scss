@@ -1,0 +1,135 @@
+
+.menu-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    transform: translateX(100%);
+    transition: transform 250ms $timing-function;
+    background-color: $primeri-white-color;
+    padding: 48px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.menu-container.is-open {
+    transform: translateX(0);
+
+}
+.menu-toggle__wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    width: 100%;
+    height: 60px;
+    border-bottom: 1px solid $header-border-color;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+.menu-toggle {
+    width: 40px;
+    height: 40px;
+    @include centerFlex();
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    transition: fill 250ms $timing-function; 
+
+    &:hover,
+    &:focus {
+        fill: $accent-color;
+    }
+
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+}
+.menu-toggle__button--open {
+    fill: $logo-black-color;
+}
+.menu-toggle__button--close {
+    fill: $title-text-color;
+}
+
+.mobile-menu__list {
+    @extend %list;
+    @include layoutFlex(32px);
+    flex-direction: column;
+}
+.mobile-menu__link {
+    @extend %link;
+    @include fontStyle(40px, 1.17, 0.02em);
+    font-weight: 500;
+    color: $title-text-color;
+    transition: color 250ms $timing-function;
+
+    &:hover,
+    &:focus {
+        color: $accent-color;
+    }
+}
+.mobile-menu__link--current {
+    color: $accent-color; 
+}
+
+.mobile-contacts {
+    @extend %list;
+    @include layoutFlex(32px);
+    flex-direction: column;
+    margin-bottom: 64px;
+}
+
+.mobile-contacts__link {
+    @extend %link;
+    @include fontStyle(24px, 1.17, 0.02em);
+    font-weight: 500;
+    color: $primery-text-color;
+    transition: color 250ms $timing-function;
+
+    &:hover,
+    &:focus {
+        color: $accent-color;
+    }
+
+}
+.mobile-contacts__link--tel {
+    font-size: 34px;
+}
+
+.mobile-net {
+    @extend %list;
+    @include layoutFlex(10px);
+    flex-wrap: wrap;
+}
+.mobile-net__item {
+
+    &:not(:last-child) {
+        padding-right: 10px;
+        border-right: 1px solid $form-border-color;
+    }
+
+
+}
+
+.mobile-net__link {
+    @extend %link;
+    @include fontStyle(18px, 1.22, 0.02em);
+    color: $accent-color;
+    transition: color 250ms $timing-function;
+    
+
+    &:hover,
+    &:focus {
+        color: $hero-batton-activ-color;
+    }
+
+}
+

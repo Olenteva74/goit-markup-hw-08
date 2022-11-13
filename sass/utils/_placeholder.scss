@@ -1,0 +1,52 @@
+%section {
+    padding: 60px 0;
+}
+
+%button {
+    font-family: inherit;
+    cursor: pointer;
+    border-radius: 4px;
+    border-color: transparent;
+}
+%primary-button {
+    color: $primeri-white-color;
+    background-color: $accent-color;
+    transition: background-color 250ms $timing-function;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+    &:hover,
+    &:focus {
+        background-color: $hero-batton-activ-color;
+    }
+}
+
+%link {
+
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    &:hover,
+    &:focus {
+        color: $accent-color; 
+
+    }
+}
+
+%list {
+    list-style-type: none;
+}
+
+%title {
+    margin-bottom: 50px;
+    color: $title-text-color;
+    text-align: center;  
+    font-size: 36px;
+    line-height: 1.17; 
+    
+}
+

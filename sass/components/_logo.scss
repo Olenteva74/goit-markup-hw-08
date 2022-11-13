@@ -1,0 +1,27 @@
+.logo {
+    @include fontStyle(24px, 1.17);
+    color: $logo-black-color;
+    font-family: $logo-font-family;
+    font-weight: 700;
+    text-decoration: none;
+
+    @media screen and (min-width: 1200px) {
+        @include fontStyle(26px, 1.15);
+    }
+}
+
+.site-nav__logo {
+    margin-right: 93px;
+}
+.logo__label--accent {
+    color: $accent-color;
+}
+.logo__label--white {
+    color: $primeri-white-color;
+}
+.page-footer__logo {
+   
+    display: inline-block;
+    // margin-bottom: 20px;
+
+}

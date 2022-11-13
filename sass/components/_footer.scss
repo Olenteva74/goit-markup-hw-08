@@ -1,0 +1,71 @@
+// Footer 
+.page-footer {
+    @extend %section;
+    background-color: $accent-background-color;
+}
+
+.page-footer__container {
+    @include layoutFlex(60px);
+    flex-direction: column;
+
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: baseline;
+    }
+
+    @media screen and (min-width: 1200px) {
+       gap: 70px;
+    }
+
+}
+
+// Adress
+
+.adress__wrapper--footer {
+    @include layoutFlex(20px);
+    flex-direction: column;
+    align-items: center;
+}
+.page-footer__text {
+    @include fontStyle($line-height: 1.14);
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $primeri-white-color;
+}
+
+.adress__list {
+    @extend %list;
+    @include layoutFlex(8px);
+    flex-direction: column;
+    align-items: center;
+
+    @media screen and (min-width: 1200px) {
+        gap: 9px;
+        align-items: flex-start;
+     }
+ }
+
+
+.adress__link {
+    @extend %link;
+    color: $primeri-white-color;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    transition: color 250ms $timing-function;
+}
+.adress__link--contact {
+    @extend %link;
+    color: $adress-link-color;
+    font-weight: 400; 
+    font-style: normal; 
+    transition: color 250ms $timing-function;
+}
+.adress__link:hover,
+.adress__link--contact:hover,
+.adress__link:focus,
+.adress__link--contact:focus {
+    color: $accent-color;
+}

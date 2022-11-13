@@ -1,0 +1,78 @@
+.portfolio__list {
+    @extend %list;
+    @include layoutFlex();
+    flex-wrap: wrap;
+}
+
+.portfolio__item {
+
+    @media screen and (min-width: 768px) {
+        flex-basis: calc((100% - 30px)/2);
+    }
+
+    @media screen and (min-width: 1200px) {
+        flex-basis: calc((100% - 60px)/3);
+    }
+}
+
+.portfolio__link {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: $primery-text-color;
+    transition: box-shadow 250ms $timing-function;
+
+    &:hover,
+    &:focus {
+        box-shadow: $card-box-shadow;
+    } 
+
+    &:hover .portfolio__overlay,
+    &:focus .portfolio__overlay {
+    transform: translateY(0);
+
+}
+    
+} 
+
+.portfolio__thumb {
+    position: relative;
+    width: 100%;
+    height: 294px;
+    overflow: hidden;
+}
+ .portfolio__overlay {
+    @include centerFlex();
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $overlay-color;
+    transform: translateY(101%);
+    transition: transform 250ms $timing-function;
+
+} 
+.portfolio__text {
+    @include fontStyle(18px, 1.56);
+    padding: 0 24px;
+    color: $primeri-white-color;
+}
+.portfolio__border {
+    @include cardBordered($card-border-color);
+    padding: 20px 24px;
+    flex-grow: 1;
+
+}
+
+.portfolio__title {
+    @include fontStyle(18px, 2, 0.06em);
+    margin-bottom: 4px;   
+    color: $title-text-color;
+    
+}
+.portfolio__label {
+    @include fontStyle(16px, 1.88);
+   
+}

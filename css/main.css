@@ -65,7 +65,7 @@ img {
   margin: -1px;
 }
 
-.page-footer, .portfolio, .features {
+.page-footer, .features {
   padding: 60px 0;
 }
 
@@ -424,6 +424,7 @@ img {
   margin-right: auto;
   width: 200px;
   height: 50px;
+  padding: 10px 52px;
 }
 
 .footer-button {
@@ -529,6 +530,12 @@ img {
   margin-bottom: 10px;
   color: #212121;
   text-transform: uppercase;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .features__title {
+    text-align: start;
+  }
 }
 
 @media screen and (max-width: 1199px) {
@@ -720,6 +727,13 @@ img {
       -ms-flex-pack: center;
           justify-content: center;
 }
+@media screen and (min-width: 1200px) {
+  .net__wrapper--footer {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
 
 .net__list--footer {
   padding-bottom: 0;
@@ -844,8 +858,20 @@ img {
   display: -ms-flexbox;
   display: flex;
   gap: 30px;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .portfolio__list {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -997,6 +1023,13 @@ img {
       -ms-flex-align: center;
           align-items: center;
 }
+@media screen and (min-width: 1200px) {
+  .adress__wrapper--footer {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
 
 .page-footer__text {
   font-size: 14px;
@@ -1081,6 +1114,13 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+@media screen and (min-width: 1200px) {
+  .footer-form {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
 }
 
 .footer-form__field {
@@ -1192,13 +1232,11 @@ img {
 @media screen and (min-width: 480px) {
   .modal {
     width: 450px;
-    height: 609px;
   }
 }
 @media screen and (min-width: 1200px) {
   .modal {
     width: 528px;
-    min-height: 581px;
   }
 }
 
@@ -1405,7 +1443,6 @@ img {
   z-index: -1;
   width: 100%;
   height: 60px;
-  border-bottom: 1px solid #ECECEC;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

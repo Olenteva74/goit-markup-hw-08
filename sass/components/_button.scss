@@ -20,6 +20,7 @@
     @extend %primary-button;
     @include centerButton();
     @include sizeButton();
+    padding: 10px 52px;
 }
 // footer-form button 
 

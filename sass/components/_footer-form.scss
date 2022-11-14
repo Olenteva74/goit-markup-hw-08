@@ -14,9 +14,13 @@
     @include centerFlex();
     gap: 20px;
     flex-direction: column;
+    
+    @media screen and (min-width: 1200px) {
+        align-items: flex-start;
+    }
 }
+
 .footer-form__field {
-   
     width: 100%;
     @include centerFlex();
     gap: 20px;
